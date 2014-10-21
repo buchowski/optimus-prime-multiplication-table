@@ -1,0 +1,3 @@
+def primeNumbers(n)
+
+end
