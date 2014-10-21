@@ -57,4 +57,14 @@ describe "#multiplicationTable" do
             expect(tableMax(multiplicationTable(1))).to eq(1)
         end
     end
+    context "returns max value of" do
+        it "1 when n == 10" do 
+            expect(tableMax(multiplicationTable(10))).to eq(23 * 23)
+        end
+    end
+    context "returns min value of" do
+        it "1 when n == 20" do
+            expect(tableMin(multiplicationTable(20))).to eq(1)
+        end
+    end
 end
