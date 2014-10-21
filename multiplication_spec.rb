@@ -40,21 +40,21 @@ describe "#multiplicationTable" do
             expect(multiplicationTable(0)).to eq([])
         end
         it "2 rows when n = 1" do
-            expect(multiplicationTable(0).size).to eq(2)
+            expect(multiplicationTable(1).size).to eq(2)
         end
-        it "4 cols when n = 3" do
-            expect(multiplicationTable(0).first.size).to eq(2)
+        it "3 cols when n = 3" do
+            expect(multiplicationTable(3).first.size).to eq(3)
         end
         it "11 rows when n = 10" do 
-            expect(multiplicationTable(0).size).to eq(10)
+            expect(multiplicationTable(10).size).to eq(11)
         end
-        it "11 cols when n = 10" do 
-            expect(multiplicationTable(0).first.size).to eq(10)
+        it "10 cols when n = 10" do 
+            expect(multiplicationTable(10).first.size).to eq(10)
         end
     end
     context "returns max value of" do
         it "1 when n == 1" do 
-            expect(tableMax(multiplicationTable(0))).to eq(1)
+            expect(tableMax(multiplicationTable(1))).to eq(1)
         end
     end
 end
