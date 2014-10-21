@@ -10,3 +10,18 @@ def primeNumbers(n)
 
     return primes
 end
+
+def multiplicationTable(n)
+    primes = primeNumbers(n)
+    table = primes.empty? ? [] : [[].concat(primes)]
+
+    primes.each do |i|
+        row = []
+        primes.each do |j|
+            row.push(i * j)
+        end
+        table.push(row)
+    end
+
+    return table
+end
