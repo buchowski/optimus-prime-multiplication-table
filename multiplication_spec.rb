@@ -1,4 +1,5 @@
 load 'multiplication.rb'
+load 'spec_helper.rb'
 
 describe "#primeNumbers" do
     it "returns [] when n == 0" do
@@ -21,5 +22,39 @@ describe "#primeNumbers" do
     it "does not include numbers that aren't prime" do
         primes = primeNumbers(14)
         expect(primeNumbers(14)).not_to include(4, 6, 21, 44, 99, 112)
+    end
+end
+
+describe "spec_helper function" do
+    it "#tableMax returns 45 when max cell value is 45" do
+        expect(tableMax([[1, 30, 22], [44, 45, 0], [-4, 11, 40]])).to eq(45)
+    end
+    it "#tableMin returns 1230 when min cell value is 1230" do
+        expect(tableMin([[1967, 3000, 100000], [9888, 1230, 1231], [4000, 1800, 1230]])).to eq(1230)
+    end
+end
+
+describe "#multiplicationTable" do
+    context "returns table with" do
+        it "no rows or cols when there are no primes (n == 0)" do
+            expect(multiplicationTable(0)).to eq([])
+        end
+        it "2 rows when n = 1" do
+            expect(multiplicationTable(0).size).to eq(2)
+        end
+        it "4 cols when n = 3" do
+            expect(multiplicationTable(0).first.size).to eq(2)
+        end
+        it "11 rows when n = 10" do 
+            expect(multiplicationTable(0).size).to eq(10)
+        end
+        it "11 cols when n = 10" do 
+            expect(multiplicationTable(0).first.size).to eq(10)
+        end
+    end
+    context "returns max value of" do
+        it "1 when n == 1" do 
+            expect(tableMax(multiplicationTable(0))).to eq(1)
+        end
     end
 end
