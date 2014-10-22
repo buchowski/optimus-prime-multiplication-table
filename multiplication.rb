@@ -13,7 +13,7 @@ end
 
 def multiplicationTable(n)
     primes = primeNumbers(n)
-    table = primes.empty? ? [] : [[].concat(primes)]
+    table = []
 
     primes.each do |i|
         row = []
@@ -25,3 +25,12 @@ def multiplicationTable(n)
 
     return table
 end
+
+def printTable(table)
+    table.each do |row|
+        $stdout.puts row.to_s
+    end
+end
+
+printTable(multiplicationTable(10))
+
