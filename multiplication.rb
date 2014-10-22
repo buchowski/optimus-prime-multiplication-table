@@ -28,7 +28,7 @@ end
 
 def printTable(table)
     table.each do |row|
-        $stdout.puts row.to_s
+        $stdout.puts row.join("\t")
     end
 end
 
