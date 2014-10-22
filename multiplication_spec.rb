@@ -39,14 +39,14 @@ describe "#multiplicationTable" do
         it "no rows or cols when there are no primes (n == 0)" do
             expect(multiplicationTable(0)).to eq([])
         end
-        it "2 rows when n = 1" do
-            expect(multiplicationTable(1).size).to eq(2)
+        it "1 rows when n = 1" do
+            expect(multiplicationTable(1).size).to eq(1)
         end
         it "3 cols when n = 3" do
             expect(multiplicationTable(3).first.size).to eq(3)
         end
-        it "11 rows when n = 10" do 
-            expect(multiplicationTable(10).size).to eq(11)
+        it "10 rows when n = 10" do 
+            expect(multiplicationTable(10).size).to eq(10)
         end
         it "10 cols when n = 10" do 
             expect(multiplicationTable(10).first.size).to eq(10)
