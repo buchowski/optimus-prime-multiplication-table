@@ -32,5 +32,7 @@ def printTable(table)
     end
 end
 
-printTable(multiplicationTable(10))
+puts "How many primes would you like?"
+primes = gets.to_i
+printTable(multiplicationTable(primes))
 
