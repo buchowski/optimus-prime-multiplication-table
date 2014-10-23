@@ -39,20 +39,6 @@ def products(n)
     return products
 end
 
-def buildTable(products, n)
-    count = 0
-    size = products.size
-
-    products.each_with_index do |j, i|
-        if Math.sqrt(j) % 1 == 0
-            count++
-            k = i + n - count
-            print products[i...k]
-            
-        end
-    end
-end
-
 def printTable(table)
     table.each do |row|
         $stdout.puts row.join("\t")
@@ -61,6 +47,4 @@ end
 
 puts "How many primes would you like?"
 n = gets.to_i
-# printTable(multiplicationTable(primes))
-buildTable(products(n), n)
-
+printTable(multiplicationTable(n))
